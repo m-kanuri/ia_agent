@@ -9,10 +9,6 @@ Includes unit tests and a tiny, optional ML demo (logistic regression) for “ar
 ![Tests](https://img.shields.io/badge/tests-unittest-green)
 ![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey)
 
----
-
-# Intelligent Forensics Agent — Practical Demo
-
 This project is the practical implementation of my Unit 6 design.  
 It builds a small **file-triage agent** that:
 
