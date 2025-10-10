@@ -48,11 +48,42 @@ A tiny, optional **logistic-regression** demo is included to flag “likely non-
   # If needed:
   export MAGIC="$(brew --prefix)/share/misc/magic.mgc"
 
+## 3) Code layout
+
+src/
+discovery.py # safe traversal (platform-aware excludes; read-only)
+identifier.py # content-first MIME (python-magic → filetype → extension)
+processor.py # SHA-256, size, timestamps (data minimisation)
+database.py # SQLite upsert + indexes (idempotent re-runs)
+learner.py # tiny, optional demo model (advisory only)
+main.py # CLI orchestrator; prints Run Summary
+tests/
+test_discovery.py test_identifier.py test_processor.py test_database.py
+sample_data/
+
 ## 3) How to run (demo scan)
 
 The sample dataset is in sample_data/. This command scans it, identifies types by content, and writes results to agent.db.
 
 python -m src.main --target sample_data --db agent.db
+
+You should see a short summary like:
+
+=== Run Summary ===
+Target: .../sample_data
+DB: .../agent.db
+Files processed: 5
+Counts by MIME:
+  text/plain: 2
+  application/pdf: 1
+  image/jpeg: 1
+  text/csv: 1
+Sample record:
+{ "path": "...", "size": 123, "mtime": ..., "ctime": ..., "mime": "text/plain",
+  "sha256": "...", "detector": "python-magic" }
+Elapsed: 0.0Xs
+
+## 4) Run tests
 
 ## References (Harvard style)
 
