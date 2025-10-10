@@ -97,10 +97,11 @@ python -m src.main --target sample_data --db agent.db
 }
 ~~~
 ## 5) Tests & coverage
-
+~~~bash
 python -m unittest discover -s tests -v | tee test_output.txt
 coverage run -m unittest discover -s tests
 coverage report -m | tee coverage_output.txt
+~~~
 
 ## 4) References (Harvard style)
 
