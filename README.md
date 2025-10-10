@@ -96,7 +96,7 @@ python -m src.main --target sample_data --db agent.db
   "detector": "python-magic"
 }
 
-
+--
 
 ## 5) Tests & coverage
 
