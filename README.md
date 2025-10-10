@@ -78,6 +78,10 @@ This command scans the sample data, identifies types by content, and writes resu
 
 ```bash
 python -m src.main --target sample_data --db agent.db
+```
+### Example Run Summary Output
 
----
+The CLI prints a structured summary after execution. This output verifies successful execution, file identification counts, and minimal metadata capture for a sample record.
+
+*Example Output Snippet:*
 
