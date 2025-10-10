@@ -74,7 +74,7 @@ python -m src.main --target sample_data --db agent.db
 - **Files processed:** `5`
 - **Elapsed:** `0.0Xs`
 
-### Counts by MIME
+## Counts by MIME
 | MIME Type           | Count |
 |---------------------|:-----:|
 | text/plain          |   2   |
@@ -82,7 +82,7 @@ python -m src.main --target sample_data --db agent.db
 | image/jpeg          |   1   |
 | text/csv            |   1   |
 
-### Sample record
+## Sample record
 ```json
 { "path": "...", "size": 123, "mtime": "...", "ctime": "...", "mime": "text/plain",
   "sha256": "...", "detector": "python-magic" }
