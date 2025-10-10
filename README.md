@@ -85,8 +85,7 @@ python -m src.main --target sample_data --db agent.db
 
 
 ## Sample record
-
-```json
+~~~json
 {
   "path": "...",
   "size": 123,
@@ -97,7 +96,6 @@ python -m src.main --target sample_data --db agent.db
   "detector": "python-magic"
 }
 ~~~
-
 ## 5) Tests & coverage
 
 python -m unittest discover -s tests -v | tee test_output.txt
