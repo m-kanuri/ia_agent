@@ -96,7 +96,6 @@ python -m src.main --target sample_data --db agent.db
   "sha256": "...",
   "detector": "python-magic"
 }
-
 ## 5) Tests & coverage
 
 python -m unittest discover -s tests -v | tee test_output.txt
