@@ -96,17 +96,15 @@ python -m src.main --target sample_data --db agent.db
   "detector": "python-magic"
 }
 
---
 
 ## 5) Tests & coverage
 
-```bash
 python -m unittest discover -s tests -v | tee test_output.txt
 coverage run -m unittest discover -s tests
 coverage report -m | tee coverage_output.txt
 
 
----
+
 ## 4) References (Harvard style)
 
 Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/
