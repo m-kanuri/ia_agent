@@ -67,21 +67,26 @@ The sample dataset is in sample_data/. This command scans it, identifies types b
 
 python -m src.main --target sample_data --db agent.db
 
-You should see a short summary like:
+## Run Summary
 
-=== Run Summary ===
-Target: .../sample_data
-DB: .../agent.db
-Files processed: 5
-Counts by MIME:
-  text/plain: 2
-  application/pdf: 1
-  image/jpeg: 1
-  text/csv: 1
-Sample record:
-{ "path": "...", "size": 123, "mtime": ..., "ctime": ..., "mime": "text/plain",
+- **Target:** `.../sample_data`
+- **DB:** `.../agent.db`
+- **Files processed:** `5`
+- **Elapsed:** `0.0Xs`
+
+### Counts by MIME
+| MIME Type           | Count |
+|---------------------|:-----:|
+| text/plain          |   2   |
+| application/pdf     |   1   |
+| image/jpeg          |   1   |
+| text/csv            |   1   |
+
+### Sample record
+```json
+{ "path": "...", "size": 123, "mtime": "...", "ctime": "...", "mime": "text/plain",
   "sha256": "...", "detector": "python-magic" }
-Elapsed: 0.0Xs
+
 
 ## 4) Run tests
 
