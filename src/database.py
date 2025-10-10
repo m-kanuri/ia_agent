@@ -1,5 +1,29 @@
+# Intelligent Forensics Agent (Agent 1) — Database v1.0
+# Module: database.py
+# Author: Murthy Kanuri
+# Date: 10 October 2025
+#
+# Purpose
+# -------
+# Keep storage simple and portable: a single SQLite file with one table (`files`)
+# for minimal metadata. We upsert so re-runs are idempotent.
+#
+# Why SQLite:
+# - Zero-config, cross-platform, easy to archive with the rest of the evidence.
+# - Queryable on any machine (no server to stand up).
+# - WAL mode gives safe concurrent reads during a scan.
+#
+# Usage
+# -----
+#   con = connect("agent.db")
+#   upsert_files(con, rows)         # rows = dicts from processor/basic_metadata
+#   print(count_by_mime(con))
+#
+# Notes:
+# - We key on `path` for idempotency. For stricter change tracking you could
+#   add a composite (path, mtime) or a separate history table later.
+# - We only store metadata + hash here; no file contents (data minimisation).
 
-# SQLite storage. Why: portable, low-overhead, queryable.
 from __future__ import annotations
 import sqlite3
 from typing import Iterable, Dict, Any
