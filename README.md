@@ -23,14 +23,15 @@ A tiny, optional **logistic-regression** demo is included to flag “likely non-
 
 ## 1) Implementation overview
 
-**Architecture (reactive pipeline):** `Discover → Identify → Decide → Act → Audit`
+- ## Module map
 
 - `src/discovery.py` — safe traversal using `psutil`; prunes system/sensitive paths.
 - `src/identifier.py` — **content-based** MIME via `python-magic`, then `filetype`, then extension as last resort.
 - `src/processor.py` — reads stat info + **SHA-256**; keeps data minimal.
 - `src/database.py` — SQLite **upsert + indexes** so re-runs are idempotent.
 - `src/learner.py` — tiny features + logistic regression (saved with `joblib`) for a toy “archive?” recommendation.
-- `src/main.py` — CLI orchestrator; prints a 
+- `src/main.py` — CLI orchestrator; prints a **Run Summary** (target, DB path, counts by MIME, sample record).
+
 
 **Why these choices**
 - Content beats extensions for forensic robustness.
