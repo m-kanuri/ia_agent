@@ -1,4 +1,7 @@
-
+# Intelligent Forensics Agent (Agent 1) — Identifier v1.0
+# Module: identifier.py
+# Author: Murthy Kanuri
+# Date: 10 October 2025
 # Identifier: prefer content-based MIME detection (python-magic), fallback to filetype, then extension.
 from __future__ import annotations
 import mimetypes
