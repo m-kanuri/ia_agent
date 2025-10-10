@@ -48,7 +48,6 @@ A tiny, optional **logistic-regression** demo is included to flag “likely non-
   # If needed:
   export MAGIC="$(brew --prefix)/share/misc/magic.mgc"
 
----
 ## 3) Code layout
 
 src/
@@ -61,14 +60,14 @@ main.py # CLI orchestrator; prints Run Summary
 tests/
 test_discovery.py test_identifier.py test_processor.py test_database.py
 sample_data/
----
+
+
 ## 3) How to run (demo scan)
 
 The sample dataset is in sample_data/. This command scans it, identifies types by content, and writes results to agent.db.
 
 python -m src.main --target sample_data --db agent.db
 
----
 ## 4) Run Summary
 
 - **Target:** `.../sample_data`
