@@ -89,6 +89,7 @@ Target: .../sample_data
 DB: .../agent.db
 Files processed: 5
 Elapsed: 0.0Xs
+```
 
 Counts by MIME:
 | MIME Type | Count |
