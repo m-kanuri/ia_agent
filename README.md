@@ -48,7 +48,13 @@ A tiny, optional **logistic-regression** demo is included to flag “likely non-
   # If needed:
   export MAGIC="$(brew --prefix)/share/misc/magic.mgc"
 
-References (Harvard style)
+## 3) How to run (demo scan)
+
+The sample dataset is in sample_data/. This command scans it, identifies types by content, and writes results to agent.db.
+
+python -m src.main --target sample_data --db agent.db
+
+## References (Harvard style)
 
 Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/
  (Accessed: 10 October 2025).
