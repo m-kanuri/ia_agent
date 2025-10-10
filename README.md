@@ -1,25 +1,33 @@
-
 # Intelligent Forensics Agent (Demo)
 
-Practical implementation of the Unit 6 design: safe discovery, content-based identification, metadata extraction, and SQLite storage. Includes a tiny ML demo and unit tests.
+Practical implementation of my Unit 6 design for an **Intelligent Forensics Agent**.
 
-## Setup
-```bash
-pip install -r requirements.txt
-```
+**Agent 1 (implemented)**: safe discovery (read-only), **content-first** file identification, minimal metadata extraction, and storage in SQLite.  
+Includes unit tests and a tiny, optional ML demo (logistic regression) for “archive?” recommendations.
 
-## Run a demo scan
-```bash
-python -m src.main --target sample_data --db agent.db
-```
+![Python](https://img.shields.io/badge/python-3.11-blue)
+![Tests](https://img.shields.io/badge/tests-unittest-green)
+![Platform](https://img.shields.io/badge/platform-macOS%20%7C%20Windows-lightgrey)
 
-## Run tests
-```bash
-python -m unittest discover -s tests -v
-```
+---
 
-## Notes (why these choices)
-- Content-based detection first (magic) to reduce false positives; layered fallbacks for portability.
-- Data minimisation: size, times, SHA-256, MIME only.
-- SQLite for portability and audit-friendly queries.
-- Modular code to support plug-in parsers for specific file types.
+
+---
+
+## Why this approach
+
+- **Content-first identification**: `python-magic` → `filetype` → *extension* fallback.  
+  More robust than filename extensions alone.
+- **Data minimisation**: capture **path, size, timestamps, SHA-256, MIME** — nothing else.
+- **Safety**: read-only file access; platform-aware excludes to avoid system areas.
+- **Auditability**: deterministic CLI run that writes to SQLite with idempotent upserts.
+- **Reproducibility**: pinned deps; tests + coverage; simple, single-command demo.
+
+---
+
+## Requirements
+
+- Python **3.11** (tested). 3.10–3.12 should also work.
+- **macOS** requires `libmagic` for `python-magic`:
+  ```bash
+  brew install libmagic
