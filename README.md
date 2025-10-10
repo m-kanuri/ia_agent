@@ -83,6 +83,7 @@ python -m src.main --target sample_data --db agent.db
 
 The CLI prints a structured summary after execution. This output verifies successful execution, file identification counts, and minimal metadata capture for a sample record.
 
+```text
 === Run Summary ===
 Target: .../sample_data
 DB: .../agent.db
