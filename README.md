@@ -67,7 +67,8 @@ The sample dataset is in sample_data/. This command scans it, identifies types b
 
 python -m src.main --target sample_data --db agent.db
 
-## Run Summary
+
+## 4) Run Summary
 
 - **Target:** `.../sample_data`
 - **DB:** `.../agent.db`
@@ -87,10 +88,14 @@ python -m src.main --target sample_data --db agent.db
 { "path": "...", "size": 123, "mtime": "...", "ctime": "...", "mime": "text/plain",
   "sha256": "...", "detector": "python-magic" }
 
+## 5) Tests & Coverage 
 
-## 4) Run tests
+python -m unittest discover -s tests -v | tee test_output.txt
+coverage run -m unittest discover -s tests
+coverage report -m | tee coverage_output.txt
 
-## References (Harvard style)
+
+## 4) References (Harvard style)
 
 Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/
  (Accessed: 10 October 2025).
