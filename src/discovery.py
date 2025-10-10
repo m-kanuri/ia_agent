@@ -1,6 +1,11 @@
-
+# Intelligent Forensics Agent (Agent 1) — Discovery v1.0
+# Module: discovery.py
+# Author: Murthy Kanuri
+# Date: 10 October 2025
+# Purpose:
+#   Walk a user-supplied root (read-only) and yield file paths while
+#   pruning noisy/risky system locations up front (platform aware).
 # Discovery component: traverse the file system safely.
-# Why: Explicit exclusions and user-provided root reduce risk of destabilising the host.
 from __future__ import annotations
 import os
 import psutil
