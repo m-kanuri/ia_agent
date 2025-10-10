@@ -44,8 +44,8 @@ The agent is tested on Python 3.11.
 
 1.  **Clone the Repository (or unpack the zip):**
     ```bash
-    git clone [YOUR REPO LINK]
-    cd intelligent-forensics-agent
+    git clone https://github.com/m-kanuri/ia_agent.git
+    cd ia_agent
     ```
 
 2.  **Create and Activate Virtual Environment:**
