@@ -86,7 +86,6 @@ python -m src.main --target sample_data --db agent.db
 ## Sample record
 
 ```json
-
 {
   "path": "...",
   "size": 123,
@@ -96,6 +95,7 @@ python -m src.main --target sample_data --db agent.db
   "sha256": "...",
   "detector": "python-magic"
 }
+
 
 
 ## 5) Tests & coverage
