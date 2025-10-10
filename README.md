@@ -124,3 +124,20 @@ coverage run -m unittest discover -s tests
 ### 3. Generate coverage report
 coverage report -m | tee coverage_output.txt
 
+## 5) References
+
+* All sources underpinning the design and implementation, including academic concepts and external libraries, are listed below in Harvard style.
+
+* Group E (Kanuri, M. et al.) (2025) Intelligent Agents: Development Team Project Report (Unit 6 Design). (The foundational design document for this implementation).
+
+* Hupp, A. (2025) python-magic (libmagic bindings). Available at: https://github.com/ahupp/python-magic (Accessed: 10 October 2025).
+
+* ICO (2024) Data minimisation. Available at: https://ico.org.uk/... (Accessed: 10 October 2025).
+
+* Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825–2830.
+
+* Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/ (Accessed: 10 October 2025).
+
+* Rodolà, G. (2025) psutil documentation. Available at: https://psutil.readthedocs.io/ (Accessed: 10 October 2025).
+
+* SQLite Consortium (2025) SQLite Documentation. Available at: https://www.sqlite.org/docs.html (Accessed: 10 October 2025).
