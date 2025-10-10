@@ -83,6 +83,7 @@ python -m src.main --target sample_data --db agent.db
 | image/jpeg          |   1   |
 | text/csv            |   1   |
 
+
 ## Sample record
 
 ```json
@@ -96,14 +97,11 @@ python -m src.main --target sample_data --db agent.db
   "detector": "python-magic"
 }
 
-
 ## 5) Tests & coverage
 
 python -m unittest discover -s tests -v | tee test_output.txt
 coverage run -m unittest discover -s tests
 coverage report -m | tee coverage_output.txt
-
-
 
 ## 4) References (Harvard style)
 
