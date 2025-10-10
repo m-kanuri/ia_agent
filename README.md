@@ -79,6 +79,8 @@ This command scans the sample data, identifies types by content, and writes resu
 ```bash
 python -m src.main --target sample_data --db agent.db
 
+---
+
 ## 4) Run Summary
 
 - **Target:** `.../sample_data`
