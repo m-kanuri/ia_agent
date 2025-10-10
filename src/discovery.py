@@ -5,7 +5,7 @@ from __future__ import annotations
 import os
 import psutil
 from typing import Iterator, List, Set
-
+# We import psutil here specifically because we need environment awareness to identify and exclude mounted volumes later.
 def _platform_excludes() -> Set[str]:
     excludes = set()
     if os.name == "nt":
