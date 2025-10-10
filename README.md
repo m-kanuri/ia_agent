@@ -83,5 +83,42 @@ python -m src.main --target sample_data --db agent.db
 
 The CLI prints a structured summary after execution. This output verifies successful execution, file identification counts, and minimal metadata capture for a sample record.
 
-*Example Output Snippet:*
+=== Run Summary ===
+Target: .../sample_data
+DB: .../agent.db
+Files processed: 5
+Elapsed: 0.0Xs
+
+Counts by MIME:
+| MIME Type | Count |
+|:---|:---:|
+| text/plain | 2 |
+| application/pdf | 1 |
+... (rest of the counts)
+
+Sample record:
+{
+"path": "...",
+"size": 123,
+"mime": "text/plain",
+"sha256": "...",
+"detector": "python-magic"
+}
+---
+
+## 4) Testing & Code Quality
+
+The project includes a full unit test suite targeting core modules for correctness and stability.
+
+Test Commands
+The following commands run the tests and generate the coverage report:
+
+# 1. Run tests (to verify code correctness)
+python -m unittest discover -s tests -v | tee test_output.txt
+
+# 2. Run coverage (to measure code quality)
+coverage run -m unittest discover -s tests
+
+# 3. Generate coverage report
+coverage report -m | tee coverage_output.txt
 
