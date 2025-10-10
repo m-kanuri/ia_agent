@@ -81,7 +81,7 @@ python -m src.main --target sample_data --db agent.db
 
 ---
 
-## 4)Example Run Summary Output
+## 4) Example Run Summary Output
 
 - **Target:** `.../sample_data`
 - **DB:** `.../agent.db`
@@ -109,6 +109,7 @@ python -m src.main --target sample_data --db agent.db
   "detector": "python-magic"
 }
 ~~~
+
 ---
 
 ## 5) Tests & coverage
@@ -122,8 +123,8 @@ coverage run -m unittest discover -s tests
 # 3. Generate coverage report
 coverage report -m | tee coverage_output.txt
 ~~~
-
-## 4) References (Harvard style)
+---
+## 6) References (Harvard style)
 
 Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/
  (Accessed: 10 October 2025).
