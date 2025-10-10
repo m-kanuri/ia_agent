@@ -30,7 +30,7 @@ A tiny, optional **logistic-regression** demo is included to flag “likely non-
 - `src/processor.py` — reads stat info + **SHA-256**; keeps data minimal.
 - `src/database.py` — SQLite **upsert + indexes** so re-runs are idempotent.
 - `src/learner.py` — tiny features + logistic regression (saved with `joblib`) for a toy “archive?” recommendation.
-- `src/main.py` — CLI orchestrator; prints a **Run Summary**.
+- `src/main.py` — CLI orchestrator; prints a 
 
 **Why these choices**
 - Content beats extensions for forensic robustness.
