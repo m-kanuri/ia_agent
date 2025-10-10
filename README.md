@@ -48,6 +48,7 @@ A tiny, optional **logistic-regression** demo is included to flag “likely non-
   # If needed:
   export MAGIC="$(brew --prefix)/share/misc/magic.mgc"
 
+---
 ## 3) Code layout
 
 src/
@@ -60,14 +61,14 @@ main.py # CLI orchestrator; prints Run Summary
 tests/
 test_discovery.py test_identifier.py test_processor.py test_database.py
 sample_data/
-
+---
 ## 3) How to run (demo scan)
 
 The sample dataset is in sample_data/. This command scans it, identifies types by content, and writes results to agent.db.
 
 python -m src.main --target sample_data --db agent.db
 
-
+---
 ## 4) Run Summary
 
 - **Target:** `.../sample_data`
@@ -87,6 +88,7 @@ python -m src.main --target sample_data --db agent.db
 ```json
 { "path": "...", "size": 123, "mtime": "...", "ctime": "...", "mime": "text/plain",
   "sha256": "...", "detector": "python-magic" }
+---
 
 ## 5) Tests & Coverage 
 
@@ -94,7 +96,7 @@ python -m unittest discover -s tests -v | tee test_output.txt
 coverage run -m unittest discover -s tests
 coverage report -m | tee coverage_output.txt
 
-
+---
 ## 4) References (Harvard style)
 
 Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/
@@ -116,3 +118,4 @@ SQLite Consortium (2025) SQLite Documentation. Available at: https://www.sqlite.
 
 The Unit 6 design report is cited in the presentation’s References slide.
 
+---
