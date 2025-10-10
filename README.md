@@ -87,9 +87,8 @@ python -m src.main --target sample_data --db agent.db
 ```json
 { "path": "...", "size": 123, "mtime": "...", "ctime": "...", "mime": "text/plain",
   "sha256": "...", "detector": "python-magic" }
----
 
-## 5) Tests & Coverage 
+## 5) Tests & coverage
 
 python -m unittest discover -s tests -v | tee test_output.txt
 coverage run -m unittest discover -s tests
