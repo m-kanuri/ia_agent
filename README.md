@@ -81,7 +81,7 @@ python -m src.main --target sample_data --db agent.db
 
 ---
 
-## 4) Run Summary
+## 4)Example Run Summary Output
 
 - **Target:** `.../sample_data`
 - **DB:** `.../agent.db`
@@ -109,10 +109,17 @@ python -m src.main --target sample_data --db agent.db
   "detector": "python-magic"
 }
 ~~~
+---
+
 ## 5) Tests & coverage
 ~~~bash
+# 1. Run tests (to verify code correctness)
 python -m unittest discover -s tests -v | tee test_output.txt
+
+# 2. Run coverage (to measure code quality)
 coverage run -m unittest discover -s tests
+
+# 3. Generate coverage report
 coverage report -m | tee coverage_output.txt
 ~~~
 
