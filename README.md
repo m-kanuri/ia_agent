@@ -48,3 +48,24 @@ A tiny, optional **logistic-regression** demo is included to flag “likely non-
   # If needed:
   export MAGIC="$(brew --prefix)/share/misc/magic.mgc"
 
+References (Harvard style)
+
+Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/
+ (Accessed: 10 October 2025).
+
+Rodolà, G. (2025) psutil documentation. Available at: https://psutil.readthedocs.io/
+ (Accessed: 10 October 2025).
+
+Hupp, A. (2025) python-magic (libmagic bindings). Available at: https://github.com/ahupp/python-magic
+ (Accessed: 10 October 2025).
+
+Aparicio, T. (h2non) (2025) filetype.py. Available at: https://github.com/h2non/filetype.py
+ (Accessed: 10 October 2025).
+
+Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825–2830.
+
+SQLite Consortium (2025) SQLite Documentation. Available at: https://www.sqlite.org/docs.html
+ (Accessed: 10 October 2025).
+
+The Unit 6 design report is cited in the presentation’s References slide.
+
