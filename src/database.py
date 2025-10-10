@@ -43,12 +43,18 @@ CREATE INDEX IF NOT EXISTS idx_sha ON files(sha256);
 """
 
 def connect(db_path: str) -> sqlite3.Connection:
+    """
+    Open (or create) the SQLite DB, enable WAL, and ensure the schema exists.
+    """
     con = sqlite3.connect(db_path)
     con.execute("PRAGMA journal_mode=WAL;")
     con.executescript(SCHEMA)
     return con
 
 def upsert_files(con: sqlite3.Connection, rows: Iterable[Dict[str, Any]]) -> int:
+  """
+    Insert or update file metadata rows in an idempotent way.
+    """
     cur = con.cursor()
     count = 0
     for r in rows:
@@ -69,6 +75,9 @@ def upsert_files(con: sqlite3.Connection, rows: Iterable[Dict[str, Any]]) -> int
     return count
 
 def count_by_mime(con: sqlite3.Connection):
+    """
+    Aggregate helper for the Run Summary: (mime, count) sorted by frequency.
+    """
     cur = con.cursor()
     cur.execute("SELECT mime, COUNT(*) FROM files GROUP BY mime ORDER BY COUNT(*) DESC")
     return cur.fetchall()
