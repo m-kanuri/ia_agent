@@ -1,3 +1,30 @@
+# Intelligent Forensics Agent (Agent 1) — CLI Orchestrator v1.0
+# Module: main.py
+# Author: Murthy Kanuri
+# Date: 10 October 2025
+#
+# Purpose
+# -------
+# Wire the pipeline together:
+#   discover → identify (content-first) → extract metadata → upsert into SQLite,
+#   then print a short run summary. Also trains a tiny, optional demo “learner”
+#   from metadata only (no content), purely for illustration in the presentation.
+#
+# Notes
+# -----
+# - Read-only: this module never mutates target files.
+# - Audit: we record which detector decided the MIME.
+# - Reproducibility: deterministic CLI; idempotent DB upserts.
+#
+# Usage
+# -----
+#   python -m src.main --target sample_data --db agent.db
+#
+# Inputs / Outputs
+# ----------------
+# - Input:  --target (dir), optional --limit, repeated --exclude
+# - Output: SQLite DB (table `files`) + console “Run Summary”
+#
 
 from __future__ import annotations
 import argparse, os, time, json
@@ -10,6 +37,14 @@ from src.learner import features_from_meta, train_demo
 
 
 def run(target: str, db: str, limit: int | None, excludes: List[str]) -> int:
+   """
+    Execute one scan end-to-end and print a concise summary.
+
+    Why structured this way:
+    - Keep the orchestration small and readable; all heavy lifting lives in
+      the components (discovery/identifier/processor/database/learner).
+    - Make it easy to unit test by returning the number of rows written.
+    """
     files = []
     for i, path in enumerate(walk_safe(target, set(excludes))):
         mime, method = detect_mime(path)
@@ -41,6 +76,12 @@ def run(target: str, db: str, limit: int | None, excludes: List[str]) -> int:
     return n
 
 def parse_args():
+    """
+    Keep the CLI minimal and predictable. Repeated --exclude is supported.
+
+    Example:
+      python -m src.main --target ~/Documents --db agent.db --exclude .git --exclude node_modules
+    """
     p = argparse.ArgumentParser()
     p.add_argument("--target", required=True)
     p.add_argument("--db", default=os.path.join('/mnt/data/ia_agent', "agent.db"))
