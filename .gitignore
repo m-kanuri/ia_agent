@@ -1,0 +1,16 @@
+# OS / editors
+.DS_Store
+.vscode/ .idea/
+
+# Python
+__pycache__/ *.pyc
+.venv/ venv/
+
+# Runtime / evidence artefacts
+agent.db *.db *.sqlite
+*.joblib *.log
+run_output.txt test_output.txt coverage_output.txt
+.coverage htmlcov/
+
+# Samples/output
+sample_data/output/*

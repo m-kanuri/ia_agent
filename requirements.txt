@@ -1,0 +1,5 @@
+psutil>=5.9
+python-magic>=0.4.27
+filetype>=1.2.0
+scikit-learn>=1.4
+joblib>=1.3
