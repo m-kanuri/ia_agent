@@ -18,6 +18,14 @@ except Exception:
     pass
 
 def detect_mime(path: str) -> Tuple[str, str]:
+    """
+    Attempts to determine the file's MIME type using a layered approach:
+    1. python-magic (most reliable content check)
+    2. filetype (lightweight content check)
+    3. mimetypes (least reliable extension guess)
+    
+   The layered approach mitigates the risk that MIME-type analysis is not foolproof and behaves unpredictably. 
+    """
     if _HAVE_MAGIC:
         try:
             m = magic.Magic(mime=True)
