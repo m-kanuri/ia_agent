@@ -85,8 +85,6 @@ python -m src.main --target sample_data --db agent.db
 
 ## Sample record
 
-
-```json
 { "path": "...", "size": 123, "mtime": "...", "ctime": "...", "mime": "text/plain",
   "sha256": "...", "detector": "python-magic" }
 
