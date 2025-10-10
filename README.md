@@ -84,9 +84,12 @@ python -m src.main --target sample_data --db agent.db
 | text/csv            |   1   |
 
 ## Sample record
+
+<details> <summary><strong>Sample record (JSON)</strong></summary>
 ```json
 { "path": "...", "size": 123, "mtime": "...", "ctime": "...", "mime": "text/plain",
   "sha256": "...", "detector": "python-magic" }
+</details> ```
 
 ## 5) Tests & coverage
 
