@@ -96,15 +96,17 @@ Counts by MIME:
 | application/pdf | 1 |
 ... (rest of the counts)
 
-Sample record:
+~~~json
 {
-"path": "...",
-"size": 123,
-"mime": "text/plain",
-"sha256": "...",
-"detector": "python-magic"
+  "path": "...",
+  "size": 123,
+  "mtime": "...",
+  "ctime": "...",
+  "mime": "text/plain",
+  "sha256": "...",
+  "detector": "python-magic"
 }
----
+~~~
 
 ## 4) Testing & Code Quality
 
