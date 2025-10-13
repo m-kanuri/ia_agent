@@ -150,5 +150,4 @@ coverage report -m | tee coverage_output.txt
 * scikit-learn Developers (2025) scikit-learn User Guide. Available at: https://scikit-learn.org/stable/ (Accessed: 11 October 2025).
 * SQLite Consortium (2025) SQLite documentation. Available at: https://sqlite.org/docs.html (Accessed: 11 October 2025).
 * Shoham, Y. (1993) ‘Agent-oriented programming’, Artificial Intelligence, 60(1), pp. 51–92.
-<img width="1014" height="328" alt="image" src="https://github.com/user-attachments/assets/97a27ea5-4d41-457d-bd1e-8334bd583dfe" />
 
