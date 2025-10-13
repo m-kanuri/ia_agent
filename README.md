@@ -73,14 +73,14 @@ The agent is tested on Python 3.11.
 
 The sample dataset is in the `sample_data/` directory.
 
-### Command
+1.  **Command**
 
 This command scans the sample data, identifies types by content, and writes results to `agent.db`.
 
 ```bash
 python -m src.main --target sample_data --db agent.db
 ```
-### Example Run Summary Output
+2.  **Example Run Summary Output**
 
 The CLI prints a structured summary after execution. This output verifies successful execution, file identification counts, and minimal metadata capture for a sample record.
 
@@ -91,8 +91,8 @@ DB: .../agent.db
 Files processed: 5
 Elapsed: 0.0Xs
 ```
+3.  **Counts by MIME:**
 
-Counts by MIME:
 | MIME Type | Count |
 |:---|:---:|
 | text/plain | 2 |
