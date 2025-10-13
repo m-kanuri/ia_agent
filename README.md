@@ -131,7 +131,7 @@ The following commands run the tests and generate the coverage report:
 
 1.  **Run tests (to verify code correctness)**
   ```bash
-python -m unittest discover -s tests -v | tee test_output.txt
+python -m unittest discover -s tests -v | tee run_output.txt
 ```
 2.  **Run coverage (to measure code quality)**
   ```bash
@@ -141,7 +141,8 @@ coverage run -m unittest discover -s tests
   ```bash
 coverage report -m | tee coverage_output.txt
 ```
-
+ **Test files produced : run_output.txt, coverage_output.txt.
+ 
 ## 6) SQLite Queries
 
 1.  **how many rows?**
