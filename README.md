@@ -118,16 +118,15 @@ The project includes a full unit test suite targeting core modules for correctne
 Test Commands
 The following commands run the tests and generate the coverage report:
 
-### 1. Run tests (to verify code correctness)
+1.  **Run tests (to verify code correctness)**
   ```bash
 python -m unittest discover -s tests -v | tee test_output.txt
 ```
-### 2. Run coverage (to measure code quality)
+2.  **Run coverage (to measure code quality)**
   ```bash
 coverage run -m unittest discover -s tests
 ```
-
-### 3. Generate coverage report
+3.  **Generate coverage report**
   ```bash
 coverage report -m | tee coverage_output.txt
 ```
