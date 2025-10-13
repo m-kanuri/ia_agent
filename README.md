@@ -154,11 +154,12 @@ coverage report -m | tee coverage_output.txt
 ```
 ## 6) Evidence (reproducible)
 
-# 1) Run and capture
+1.  **Run and capture**
  ```bash
 python -m src.main --target sample_data --db agent.db | tee run_output.txt
 ```
-# 2) SQLite summaries
+2.  **SQLite summaries**
+
  ```bash
 {
   echo "=== MIME breakdown ==="
@@ -171,7 +172,7 @@ python -m src.main --target sample_data --db agent.db | tee run_output.txt
   sqlite3 agent.db "SELECT sha256, COUNT(*) AS n FROM files GROUP BY sha256 HAVING n>1 ORDER BY n DESC;"
 } | tee sqlite_output.txt
 ```
-# 3) Tests + coverage
+3.  **Tests + coverage**
  ```bash
 python -m unittest discover -s tests -v | tee test_output.txt
 coverage run -m unittest discover -s tests
