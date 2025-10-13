@@ -128,18 +128,27 @@ coverage report -m | tee coverage_output.txt
 
 ## 5) References
 
-* All sources underpinning the design and implementation, including academic concepts and external libraries, are listed below in Harvard style.
+* Aparicio, T. (2022) filetype: infer file type and MIME. Available at: https://github.com/h2non/filetype (Accessed: 11 October 2025).
+* Batchelder, N. (2025) coverage.py — Code coverage for Python. Available at: https://coverage.readthedocs.io/ (Accessed: 11 October 2025).
+* Dubettier, A., et al. (2023) ‘File type identification tools for digital investigations’, Forensic Science International: Digital Investigation, 46, p. 301574. doi:10.1016/j.fsidi.2023.301574.
+* Hupp, A. (2022) python-magic documentation. Available at: https://github.com/ahupp/python-magic (Accessed: 11 October 2025).
+* Information Commissioner’s Office (ICO) (2024) ‘UK GDPR: Principle (c) Data minimisation’. Available at: https://ico.org.uk/ (Accessed: 11 October 2025).
+* Joblib Developers (2025) Joblib documentation. Available at: https://joblib.readthedocs.io/ (Accessed: 11 October 2025).
+* m-kanuri (2025) ia_agent. GitHub repository. Available at: https://github.com/m-kanuri/ia_agent (Accessed: 12 October 2025).
+* Kanuri, M., Espag, J., Kirwan, F. and Jittipattanakulchai, G. (2025) Intelligent Forensics Agent – Group E Design Report (Unit 6). University of Essex Online (unpublished coursework).
+* Kessler, G.C. (2024) File Signature Table. Available at: https://www.garykessler.net/library/file_sigs.html (Accessed: 11 October 2025).
+* MITRE (2024) MITRE ATT&CK®: Masquerading (T1036). Available at: https://attack.mitre.org/techniques/T1036/ (Accessed: 11 October 2025).
+* National Institute of Standards and Technology (NIST) (2020) Security and Privacy Controls for Information Systems and Organizations (SP 800-53 Rev. 5). Gaithersburg, MD: NIST.
+* OWASP Foundation (2023) Logging Cheat Sheet. Available at: https://cheatsheetseries.owasp.org/ (Accessed: 11 October 2025).
+* Pedregosa, F., Varoquaux, G., Gramfort, A. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825–2830.
+* PyPI (2024) python-magic-bin (Windows prebuilt). Available at: https://pypi.org/project/python-magic-bin/ (Accessed: 11 October 2025).
+* Python Software Foundation (PSF) (2025a) hashlib — Secure hashes and message digests. Available at: https://docs.python.org/3/library/hashlib.html (Accessed: 11 October 2025).
+* Python Software Foundation (PSF) (2025b) mimetypes — Map filenames to MIME types. Available at: https://docs.python.org/3/library/mimetypes.html (Accessed: 11 October 2025).
+* Python Software Foundation (PSF) (2025c) sqlite3 — DB-API 2.0 interface. Available at: https://docs.python.org/3/library/sqlite3.html (Accessed: 11 October 2025).
+* Python Software Foundation (PSF) (2025d) unittest — Unit testing framework. Available at: https://docs.python.org/3/library/unittest.html (Accessed: 11 October 2025).
+* Rodolà, G. (2025) psutil documentation. Available at: https://psutil.readthedocs.io/ (Accessed: 11 October 2025).
+* scikit-learn Developers (2025) scikit-learn User Guide. Available at: https://scikit-learn.org/stable/ (Accessed: 11 October 2025).
+* SQLite Consortium (2025) SQLite documentation. Available at: https://sqlite.org/docs.html (Accessed: 11 October 2025).
+* Shoham, Y. (1993) ‘Agent-oriented programming’, Artificial Intelligence, 60(1), pp. 51–92.
+<img width="1014" height="328" alt="image" src="https://github.com/user-attachments/assets/97a27ea5-4d41-457d-bd1e-8334bd583dfe" />
 
-* Group E (Kanuri, M. et al.) (2025) Intelligent Agents: Development Team Project Report (Unit 6 Design). (The foundational design document for this implementation).
-
-* Hupp, A. (2025) python-magic (libmagic bindings). Available at: https://github.com/ahupp/python-magic (Accessed: 10 October 2025).
-
-* ICO (2024) Data minimisation. Available at: https://ico.org.uk/... (Accessed: 10 October 2025).
-
-* Pedregosa, F. et al. (2011) ‘Scikit-learn: Machine Learning in Python’, Journal of Machine Learning Research, 12, pp. 2825–2830.
-
-* Python Software Foundation (2025) Python 3.11 documentation — hashlib, sqlite3, mimetypes, unittest. Available at: https://docs.python.org/3.11/ (Accessed: 10 October 2025).
-
-* Rodolà, G. (2025) psutil documentation. Available at: https://psutil.readthedocs.io/ (Accessed: 10 October 2025).
-
-* SQLite Consortium (2025) SQLite Documentation. Available at: https://www.sqlite.org/docs.html (Accessed: 10 October 2025).
