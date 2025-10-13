@@ -126,7 +126,25 @@ coverage run -m unittest discover -s tests
 ### 3. Generate coverage report
 coverage report -m | tee coverage_output.txt
 
-## 5) References
+## 4) SQLite Queries
+
+-- how many rows?
+SELECT COUNT(*) AS rows FROM files;
+
+-- MIME breakdown
+SELECT mime, COUNT(*) AS files
+FROM files GROUP BY mime ORDER BY files DESC;
+
+-- largest files
+SELECT path, size
+FROM files ORDER BY size DESC LIMIT 10;
+
+-- duplicate content by hash
+SELECT sha256, COUNT(*) AS n
+FROM files GROUP BY sha256 HAVING n > 1 ORDER BY n DESC;
+
+
+## 6) References
 
 * Aparicio, T. (2022) filetype: infer file type and MIME. Available at: https://github.com/h2non/filetype (Accessed: 11 October 2025).
 * Batchelder, N. (2025) coverage.py — Code coverage for Python. Available at: https://coverage.readthedocs.io/ (Accessed: 11 October 2025).
