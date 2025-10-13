@@ -116,7 +116,7 @@ Elapsed: 0.0Xs
 ```bash
 python -m src.main --target <folder> --db <sqlite-file> [--limit N] [--exclude PATH ...]
 ```
-# examples
+**example**
 ```bash
 python -m src.main --target sample_data --db agent.db
 python -m src.main --target ~/Documents --db agent.db --limit 200
