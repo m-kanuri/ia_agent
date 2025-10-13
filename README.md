@@ -36,6 +36,7 @@ This project implements the core **File-Triage Agent** (Agent 1) of the hybrid r
 * **Integrity:** **SHA-256** hashing ensures **evidential integrity**.
 * **Auditability:** **SQLite** gives a single portable artefact (`agent.db`) for easy audit.
 
+
 ---
 
 ## 2) Prerequisites & Setup
