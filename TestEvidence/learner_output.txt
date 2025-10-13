@@ -1,0 +1,5 @@
+=== Toy learner evidence:  ===
+
+Model SHA-256:
+c2c011e732f64cbd743afaf78ba0a3d34964058d2049176796d0445f8716e92c  demo_model.joblib
+=== End ===

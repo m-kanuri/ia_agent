@@ -1,0 +1,3 @@
+path,mime,y_true,y_pred
+/Users/murthykanuri/Documents/ia_agent/sample_data/photo.jpg,image/jpeg,1,0
+/Users/murthykanuri/Documents/ia_agent/sample_data/script.py,text/plain,0,0
