@@ -111,7 +111,18 @@ Elapsed: 0.0Xs
 }
 ~~~
 
-## 4) Testing & Code Quality
+## 4) CLU Usage & Example
+
+```bash
+python -m src.main --target <folder> --db <sqlite-file> [--limit N] [--exclude PATH ...]
+```
+# examples
+```bash
+python -m src.main --target sample_data --db agent.db
+python -m src.main --target ~/Documents --db agent.db --limit 200
+python -m src.main --target /Volumes/USB --db usb.db --exclude "/Volumes/USB/System Volume Information"
+```
+## 5) Testing & Code Quality
 
 The project includes a full unit test suite targeting core modules for correctness and stability.
 
@@ -131,7 +142,7 @@ coverage run -m unittest discover -s tests
 coverage report -m | tee coverage_output.txt
 ```
 
-## 5) SQLite Queries
+## 6) SQLite Queries
 
 1.  **how many rows?**
  ```bash
@@ -149,7 +160,7 @@ coverage report -m | tee coverage_output.txt
  ```bash
 -- SELECT sha256, COUNT(*) AS n FROM files GROUP BY sha256 HAVING n > 1 ORDER BY n DESC;
 ```
-## 6) Evidence (reproducible)
+## 7) Evidence (reproducible)
 
 1.  **Run and capture**
  ```bash
@@ -176,7 +187,7 @@ coverage run -m unittest discover -s tests
 coverage report -m | tee coverage_output.txt
 ```
 
-## 7) References
+## 8) References
 
 * Aparicio, T. (2022) filetype: infer file type and MIME. Available at: https://github.com/h2non/filetype (Accessed: 11 October 2025).
 * Batchelder, N. (2025) coverage.py — Code coverage for Python. Available at: https://coverage.readthedocs.io/ (Accessed: 11 October 2025).
