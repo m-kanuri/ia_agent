@@ -1,0 +1,21 @@
+=== Run Summary ===
+Target: /Users/murthykanuri/Documents/ia_agent/sample_data
+DB: /Users/murthykanuri/Documents/ia_agent/agent.db
+Files processed: 6
+Counts by MIME:
+  text/plain: 2
+  application/octet-stream: 1
+  application/pdf: 1
+  image/jpeg: 1
+  text/csv: 1
+Sample record:
+{
+  "path": "/Users/murthykanuri/Documents/ia_agent/sample_data/.DS_Store",
+  "size": 6148,
+  "mtime": 1760167453.0234084,
+  "ctime": 1760167453.0234084,
+  "mime": "application/octet-stream",
+  "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+  "detector": "python-magic"
+}
+Elapsed: 0.03s

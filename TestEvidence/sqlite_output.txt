@@ -1,0 +1,15 @@
+=== MIME breakdown ===
+text/plain|2
+application/octet-stream|1
+application/pdf|1
+image/jpeg|1
+text/csv|1
+
+=== Top 5 by size ===
+6148|application/octet-stream|/Users/murthykanuri/Documents/ia_agent/sample_data/.DS_Store
+136|image/jpeg|/Users/murthykanuri/Documents/ia_agent/sample_data/photo.jpg
+45|application/pdf|/Users/murthykanuri/Documents/ia_agent/sample_data/report.pdf
+32|text/plain|/Users/murthykanuri/Documents/ia_agent/sample_data/note1.txt
+23|text/plain|/Users/murthykanuri/Documents/ia_agent/sample_data/script.py
+
+=== Duplicate hashes (if any) ===
