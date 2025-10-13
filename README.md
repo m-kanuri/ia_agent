@@ -129,19 +129,16 @@ coverage report -m | tee coverage_output.txt
 ## 4) SQLite Queries
 
 -- how many rows?
-SELECT COUNT(*) AS rows FROM files;
+-- SELECT COUNT(*) AS rows FROM files;
 
 -- MIME breakdown
-SELECT mime, COUNT(*) AS files
-FROM files GROUP BY mime ORDER BY files DESC;
+-- SELECT mime, COUNT(*) AS files FROM files GROUP BY mime ORDER BY files DESC;
 
 -- largest files
-SELECT path, size
-FROM files ORDER BY size DESC LIMIT 10;
+-- SELECT path, size FROM files ORDER BY size DESC LIMIT 10;
 
 -- duplicate content by hash
-SELECT sha256, COUNT(*) AS n
-FROM files GROUP BY sha256 HAVING n > 1 ORDER BY n DESC;
+-- SELECT sha256, COUNT(*) AS n FROM files GROUP BY sha256 HAVING n > 1 ORDER BY n DESC;
 
 
 ## 6) References
